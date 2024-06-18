@@ -1,0 +1,57 @@
+{
+  "name": "execcommand",
+  "displayName": "Command Launcher",
+  "publisher": "eliostruyf",
+  "description": "Enables the execution of commands within Visual Studio Code and its extensions through clickable links, which can be accessed from outside the editor environment or Markdown previews.",
+  "version": "0.0.1",
+  "preview": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "galleryBanner": {
+    "color": "#2c2c32",
+    "theme": "dark"
+  },
+  "badges": [{
+      "description": "version",
+      "url": "https://img.shields.io/github/package-json/v/estruyf/vscode-commit-helper?color=green&label=vscode-commit-helper&style=flat-square",
+      "href": "https://github.com/estruyf/vscode-commit-helper"
+    },
+    {
+      "description": "Buy me a coffee",
+      "url": "https://img.shields.io/badge/Buy%20me%20a%20coffee-€%203-blue?logo=buy-me-a-coffee&style=flat-square",
+      "href": "https://www.buymeacoffee.com/zMeFRy9"
+    }
+  ],
+  "sponsor": {
+    "url": "https://github.com/sponsors/estruyf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/estruyf/vscode-command-launcher"
+  },
+  "bugs": {
+    "url": "https://github.com/estruyf/vscode-command-launcher/issues"
+  },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  }
+}

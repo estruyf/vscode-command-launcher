@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  release-vsmarketplace:
+    name: "Release to Visual Studio Marketplace"
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '#release') || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install the dependencies
+        run: npm ci
+
+      - name: Publish
+        run: npx @vscode/vsce publish -p ${{ secrets.VSCE_PAT }}
+
+  release-openvsx:
+    name: "Release to Open VSX Marketplace"
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '#release') || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install the dependencies
+        run: npm ci
+
+      - name: Publish to open-vsx.org
+        run: npx ovsx publish -p ${{ secrets.OPEN_VSX_PAT }}
