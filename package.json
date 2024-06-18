@@ -1,6 +1,6 @@
 {
   "name": "execcommand",
-  "displayName": "Command Launcher",
+  "displayName": "Command Executor",
   "publisher": "eliostruyf",
   "description": "Enables the execution of commands within Visual Studio Code and its extensions through clickable links, which can be accessed from outside the editor environment or Markdown previews.",
   "version": "0.0.1",

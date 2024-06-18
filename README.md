@@ -1,6 +1,6 @@
-# Command Launcher - VS Code Extension
+# Command Executor - VS Code Extension
 
-The Command Launcher extension enables the execution of commands within Visual Studio Code and its extensions through clickable links, which can be accessed from outside the editor environment or Markdown previews.
+The Command Executor extension enables the execution of commands within Visual Studio Code and its extensions through clickable links, which can be accessed from outside the editor environment or Markdown previews.
 
 ## Features
 
