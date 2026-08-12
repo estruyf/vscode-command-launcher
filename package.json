@@ -3,7 +3,7 @@
   "displayName": "Command Executor",
   "publisher": "eliostruyf",
   "description": "Enables the execution of commands within Visual Studio Code and its extensions through clickable links, which can be accessed from outside the editor environment or Markdown previews.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "preview": true,
   "engines": {
     "vscode": "^1.90.0"
@@ -15,7 +15,8 @@
     "color": "#2c2c32",
     "theme": "dark"
   },
-  "badges": [{
+  "badges": [
+    {
       "description": "version",
       "url": "https://img.shields.io/github/package-json/v/estruyf/vscode-commit-helper?color=green&label=vscode-commit-helper&style=flat-square",
       "href": "https://github.com/estruyf/vscode-commit-helper"
@@ -36,7 +37,9 @@
   "bugs": {
     "url": "https://github.com/estruyf/vscode-command-launcher/issues"
   },
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {},
   "scripts": {
